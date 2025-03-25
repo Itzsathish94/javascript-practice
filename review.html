@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="check" onclick={handleclick()}>Change</button>
+    <script>
+        function handleclick(){
+         const content =  prompt('Enter the name to change','New button');
+        confirm('Are you sure you want to change name?')
+        document.getElementById('check').innerHTML = content;
+        alert('Button name changed')
+        }
+    </script>
+</body>
+</html>

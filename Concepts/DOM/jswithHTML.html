@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id='demo' onclick=changeText()>Original</button>
+
+    <script>
+        console.log('hi')
+        document.write('Hi was consoled')
+        function changeText(){
+            confirm('Are you sure you want to change button name?');
+            prompt('What is the name?', 'Guest')
+            document.getElementById('demo').innerHTML = 'Altered';
+            console.warn('Test warning');
+            console.error('Test error');
+            debugger;
+            alert('Button text changed')
+        }
+    </script>
+</body>
+</html>
