@@ -81,76 +81,65 @@
 // })();
 
 // Example
-// const counter =(()=>{
-//     let count = 0
-
+// const counter = (function createCounter(){
+//     let count = 0;
 //     return {
-//         increment:()=>{
-//             count++
-//             return count;
-//         },
-//         decrement:()=>{
-//             count--
-//             return count;
-//         },
-//         getValue:()=> count
+//         increment:()=>count++,
+//         reset:()=>count=0,
+//         getCount:()=>console.log(count)
 //     }
 // })();
 
-// console.log(counter.getValue())
-// console.log(counter.increment())
-// console.log(counter.getValue())
+// counter.getCount();
+// counter.increment();
+
 
 // [6] Class
 // class Person{
-//     constructor(fname,lname,age){
-//         this.firstname=fname
-//         this.lastname=lname
-//         this.age=age
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     };
+//     static greeting(){
+//         console.log('Getting details');
 //     }
-//     getDetails(){
-//         return `My name is ${this.firstname} ${this.lastname} and I am ${this.age} years old`
+//     greet(){
+//         console.log(`Hi Iam ${this.name} and Iam ${this.age} years old`);
 //     }
-// }
+// };
 
-// const myFather = new Person('Alex','Tony',45)
-
-// console.log(myFather.getDetails())
+// const father = new Person('Martin',20);
+// father.greet();
 
 // [7] Inheritance
 // class Employee extends Person{
-//     constructor(fname,lname,age,job){
-//         super(fname,lname,age)
-//         this.jobtitle=job
+//     constructor(name,age,job){
+//         super(name,age);
+//         this.job = job;
 //     }
-//     getJobDetails(){
-//         return `${this.firstname} ${this.lastname} works as an ${this.jobtitle}`
+//     greet(){
+//         console.log(`Hi Iam ${this.name} (${this.job}) and Iam ${this.age} years old`);
 //     }
 // }
 
-// const myMother = new Employee('Jane','doe',45,'Tech')
-// console.log(myMother.getJobDetails())
+// const fatherJob = new Employee('Scorsky',40,'Mechanic');
+// fatherJob.greet();
+// Person.greeting();
 
-// [8,9]Call, Apply
-// const person = {
-//     name:"Basha"
+// [8,9,10]Call, Apply,Bind
+// function sayHello(greeting,punctuation){
+//     console.log(`${greeting}, Iam ${this.name}${punctuation}`);
 // };
 
-// function greet(greeting,punctuation){
-//     console.log(`${greeting} Iam ${this.name} ${punctuation}`);
-// };
+// const parent = {name:'Katy'};
+// sayHello.call(parent,'Hello','!');
 
-// greet.call(person,'Hello', '!');
-// greet.apply(person,['Hello','!']);
+// const student = {name:'Kal'};
+// sayHello.apply(student,['Hello','!']);
 
-
-// [10]Bind
-// function sayHello(){
-//     console.log(`Hello, ${this.name}!`)
-// }
-// const person = {name:'Sathish'}
-// const greetperson = sayHello.bind(person)
-// greetperson()
+// const child = {name:'Stark'};
+// const boundChild = sayHello.bind(child,'Hello','!');
+// boundChild();
 
 // [11]Currying
 // function curryAdd(x){
@@ -176,62 +165,65 @@
 // console.log(multiplesOf4.next().value)
 
 // [13]Optional chaining
-// const person = {
+// const user ={
 //     name:'sathish',
-//     age:12,
 //     address:{
-//         city:'thanjavur'
+//         street:'12',
+//         no:2
+//     },
+//     greet(){
+//         console.log(`Iam ${this.name}`)
 //     }
-// }
-// console.log(person.country?.code);
+// };
 
-// [14]Nullish coalsecing operator
-// const value1=null
-// const value2 = undefined
-// const value3 = false
-// const value4 = 'value'
-// const defaultValue = 'nullish'
+// console.log(user.location?.code);
+// console.log(user.treat?.());
 
-// console.log(value1??defaultValue);
-// console.log(value2??defaultValue);
-// console.log(value3??defaultValue);
-// console.log(value4??defaultValue);
+// [14]Nullish coalsecing operator - default values for null and undefined
+// const user ={
+//     name:'sathish',
+//     address:{
+//         street:'12',
+//         no:2
+//     },
+//     greet(){
+//         console.log(`Iam ${this.name}`)
+//     },
+//     extra:null,
+// };
 
+// const err = 'Data not found'
+
+// console.log(user.location?.code ?? err);
+// console.log(user.treat?.() ?? err);
+// console.log(user.extra ?? err);
 
 
 //[16] Memoization
-// function add(a,b){
-//     return a+b;
-// }
+// function add(...args){
+//     return args.reduce((acc,curr)=>acc+curr);
+// };
+
 // function memoize(fn){
-//     const cache = {};
-//     return function(a,b){
-//         const key = `${a},${b}`;
-//         if(cache[key]!==undefined){
-//             return cache[key];
-//         }
-//         const result = fn(a,b);
-//         cache[key] = result;
-//         return result;
-//     }
-// }
-// const memoizedAdd = memoize(add);
-// console.log(memoizedAdd(1,2))
-
-
-// const cache = {};
-
-// function memoizedAdd(a,b){
-//     const key = `${a},${b}`;
-//     if(cache[key]!==undefined){
+//     let cache ={};
+//     return function (...args){
+//         let key = args.join(',');
+//         if(cache[key]){
+//             console.log('Fetching result from cache')
 //         return cache[key];
+//         } 
+//         else {
+//             console.log('Computing result');
+//             let result = fn(...args);
+//             cache[key] = result;
+//             return result;
+//         }
 //     }
-//     const result = add(a,b);
-//     cache[key] = result;
-//     return result;
 // }
 
-// console.log(memoizedAdd(1,2));
+// const memoizedAdd = memoize(add);
+// console.log(memoizedAdd(1,2,3));
+// console.log(memoizedAdd(1,2,3));
 
 //[17]Proxy object
 // const user = {

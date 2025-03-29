@@ -1,33 +1,10 @@
-function getUser(){
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            console.log("user fetched")
-            resolve();
-        }, 1000);
-    })
- 
+function deepFreeze(obj){
+    const propNames = Object.keys(obj);
+    for(let name of propNames){
+        const value = obj[name];
+        if(value && typeof value === 'object'){
+            deepFreeze(value);
+        }
+    }
+    return Object.freeze(obj);
 }
-
-function getOrders(){
-    return new Promise((resolve)=>{
-        setTimeout(() =>{
-            console.log("Orders fetched")
-            resolve();
-        }, 1000);
-    });
-}
-
-function getOrderDetails(){
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            console.log('Fetched order details')
-            resolve('Samsung galazu');
-        }, 1000);
-    });
-}
-
-getUser()
-.then(getOrders)
-.then(getOrderDetails)
-.then((res)=>console.log(res))
-.catch((err)=>console.log(err))

@@ -25,4 +25,5 @@
 //     [secret] : 'Alert'
 // }
 
+// console.log(user[secret]);
 

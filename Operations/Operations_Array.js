@@ -1,28 +1,23 @@
 //Array operations................................................................................................................
 
 //[1]Reverse an array without reverse()
-// function reversearr(arr){
-//     for(let i=arr.length-1;i>=0;i--){
-//         arr.push(arr[i])
+// function reverseArr(arr) {
+//     let left = 0, right = arr.length - 1;
+//     while (left < right) {
+//         [arr[left], arr[right]] = [arr[right], arr[left]];
+//         left++;
+//         right--;
 //     }
-//     arr.splice(0,arr.length/2)
-//     console.log(arr)
+//     return arr;
 // }
 
-// reversearr([1,2,3,4,5])
+// reverseArr([1,2,3,4,5])
 
 //[2]Largest num in Array
-// function largestnum(arr){
-//     let largest=arr[0]
-//     let seconlargest=Infinity
-//     for(let i=0;i<arr.length;i++){
-//         if(largest<arr[i]){
-//             secondlargest=largest
-//         }
-//     }
-//     return console.log(largest)
+// function largestNum(arr){
+//     return arr.reduce((largest,curr)=>curr > largest ? curr : largest,-Infinity);
 // }
-// largestnum([1,2,3,4,5])
+// largestNum([1,2,3,4,5])
 
 //[3]sum of all numbers in array
 // function sum(arr){
@@ -175,3 +170,17 @@
 // }
 // console.log(flattenArray([1,2,[2,3,[42]]]))
 
+//[15]Second largest with reduce
+// function secondLargest(arr){
+//     let {largest, secondLargest} = arr.reduce(({largest,secondLargest},curr)=>{
+//         if(curr>largest){
+//             return {secondLargest:largest,largest:curr}
+//         }
+//         else if(curr>secondLargest && curr!==largest){
+//             return {largest,secondLargest:curr}
+//         }
+//     },{largest:-Infinity,secondLargest:-Infinity});
+//     return secondLargest;
+// }
+
+// console.log(secondLargest([1,2,3,4,5]));

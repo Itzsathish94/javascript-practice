@@ -16,6 +16,7 @@ console.log(Math.ceil(4.1)); //rounds up to nearest integer that is greater than
 console.log(Math.trunc(4.8)); //removes decimal part
 console.log(Math.sqrt(25)); //returns square root of the number
 console.log(Math.pow(2,3)); //returns base number 2 raised to the power of exponent 3
+console.log(Math.floor(4.9));
 console.log(Math.random()); //returns a floating point number greater than 0 and less than 1
 
 // Modulu (Remainder operator) - returns remainder of the division 10 % 3 = 1

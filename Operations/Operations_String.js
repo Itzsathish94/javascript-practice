@@ -8,30 +8,32 @@
 // reverseSTR('My name is Sathish')
     
 //[2]Palindrome:
-// const isPalindrome=str=>{
-//     const cleanstr=str.toLowerCase().replace(/[^a-zA-Z0-9]/g,'')
-//     const reversestr=cleanstr.split('').reverse().join('')
-//     if (cleanstr===reversestr){
-//         console.log("Given string is a palindrome")
+// function palindrome(str,left=0,right=str.length-1){
+//     while(left<right){
+//      if(str[left]!==str[right]){
+//          return 'String is not palindrome'
+//      }
+//      left++;
+//      right--;
 //     }
-//     else{
-//         console.log("Given string is not a palindrome")
-//     }
-// }
-// isPalindrome("Malayalam")
+//     return 'String is palindrome'
+//  }
+ 
+//  console.log(palindrome('malayalam'))
 
 //[3]Anagram
-// function isAnagram(str1,str2){
-//     const sortedstr1=str1.toLowerCase().replace(/[^a-zA-Z0-9]/g,'').split('').sort().join('')
-//     const sortedstr2=str2.toLowerCase().replace(/[^a-zA-Z0-9]/g,'').split('').sort().join('')
-//     if(sortedstr1===sortedstr2){
-//         console.log("Given strings are Anagram")
+// function anagram(str1,str2){
+//     if(str1.length!==str2.length) return 'Given string is not anagram';
+//     let freq = {};
+//     for(let char of str1) freq[char] = (freq[char] || 0) + 1;
+//     for(let char of str2){
+//      if(!freq[char]) return 'Given string is not anagram';
+//       freq[char]--;
 //     }
-//     else{
-//         console.log("Given strings are not Anagram")
-//     }
-// }
-// isAnagram('Silent',"Listen")
+//     return 'Given string is anagram'
+//  }
+ 
+//  console.log(anagram('silent','listn'));
 
 // [4]Find the longest word
 // function longestword(str){
@@ -154,19 +156,18 @@
 // // console.log(charFrequency(str))
 
 // [12]Non-repeating chars in a string
-// const str = 'hellol'
-// function unique(str){
-//     unique=[]
-//     sortedStr=str.split('').sort().join('')
-//     for(let i=0;i<str.length;i++){
-//         if(sortedStr[i]!==sortedStr[i-1]&&sortedStr[i]!==sortedStr[i+1]){
-//             unique.push(sortedStr[i])
-//         }
+// const str = 'Hello';
+// function findUnique(str){
+//     let freq = {};
+//     let result = '';
+//     for(let char of str) freq[char] = (freq[char] || 0)+1;
+//     for(let item in freq){
+//         if(freq[item] === 1) result+=item
 //     }
-//     return unique.join(',')
+//     return result;
 // }
 
-// console.log(unique(str));
+// console.log(findUnique(str));
 
 //[13]Secondlongest word in a sentence
 // const str = 'My sathish is name';
