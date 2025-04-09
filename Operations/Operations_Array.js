@@ -1,6 +1,6 @@
-//Array operations................................................................................................................
+// Array operations................................................................................................................
 
-//[1]Reverse an array without reverse()
+// [1]Reverse an array without reverse()
 // function reverseArr(arr) {
 //     let left = 0, right = arr.length - 1;
 //     while (left < right) {
@@ -13,13 +13,13 @@
 
 // reverseArr([1,2,3,4,5])
 
-//[2]Largest num in Array
+// [2]Largest num in Array
 // function largestNum(arr){
 //     return arr.reduce((largest,curr)=>curr > largest ? curr : largest,-Infinity);
 // }
 // largestNum([1,2,3,4,5])
 
-//[3]sum of all numbers in array
+// [3]sum of all numbers in array
 // function sum(arr){
 //     let sum=0
 //     for(let i=0;i<arr.length;i++){
@@ -29,7 +29,7 @@
 // }
 // sum([1,2,3,4,5])
 
-//[4]find if array is empty
+// [4]find if array is empty
 // function emptycheck(arr){
 //     if(arr.length<=0){
 //         return "Array is empty"
@@ -40,14 +40,14 @@
 // }
 // console.log(emptycheck([]))
 
-//[5]add elements to array
+// [5]add elements to array
 // function addElements(arr,char1,char2){
 //     arr.push(char1,char2)
 //     return arr
 // }
 // console.log(addElements([1,2],3,4))
 
-//[6]remove element
+// [6]remove element
 // function removeElement(arr,char){
 //     let delchar=arr.indexOf(char)
 //     arr.splice(delchar,1)
@@ -56,7 +56,7 @@
 
 // console.log(removeElement([1,2,3,4],3))
 
-//[7]find if duplicates elements are present
+// [7]find if duplicates elements are present
 // function duplicatetest(arr){
 //     for(i=0;i<arr.length;i++){
 //         for(let j=i+1;j<arr.length;j++){
@@ -68,7 +68,7 @@
 //  return "Array doesnt have duplicates"
 // }
 
-//[8]Array intersection
+// [8]Array intersection
 // function duplicateElem(arr1,arr2){
 //     let duplicate=[]
 //     for(let i=0;i<arr1.length;i++){
@@ -87,7 +87,7 @@
 // console.log(duplicateElem(test1,test2))
 
 
-//[9]removeduplicates
+// [9]removeduplicates
 // function removeduplicates(arr){
 //     newarr=[]
 //     for (let i=0;i<arr.length;i++){
@@ -104,14 +104,14 @@
 // console.log(duplicatetest([1,2,3,4]))
 
 
-//[10]concat arrays using spread operator
+// [10]concat arrays using spread operator
 // function spreadconcat(arr1,arr2){
 //     let output=[...arr1,...arr2]
 //     return output
 // }
 // console.log(spreadconcat([1,2],[3,4]))
 
-//[11]Loop a string array and print their length in template literals
+// [11]Loop a string array and print their length in template literals
 // function strArr(arr){
 //     for(let word of arr){
 //         console.log(`${word} - Length: ${word.length}`)
@@ -155,7 +155,7 @@
 
 // console.log(primeSum(arr))
 
-//[14] Flatten function
+// [14] Flatten function
 // function flattenArray(arr){
 //     let result = [];
 //     for(let item of arr){
@@ -170,7 +170,7 @@
 // }
 // console.log(flattenArray([1,2,[2,3,[42]]]))
 
-//[15]Second largest with reduce
+// [15]Second largest with reduce
 // function secondLargest(arr){
 //     let {largest, secondLargest} = arr.reduce(({largest,secondLargest},curr)=>{
 //         if(curr>largest){

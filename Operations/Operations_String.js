@@ -195,24 +195,24 @@
 // console.log(secondLongest(str));
 
 //[14] Reverse in place
-// let str = 'my name is sathish';
+let str = 'my name is sathish';
 
-// function reverseInPlace(str){
-//     let result ='';
-//     let word = '';
-//     for(let i=0;i<=str.length;i++){
-//         if(i<str.length && str[i]!==' '){
-//             word = str[i]+word;
-//         }
-//         else{
-//             result+=word+(i<str.length? ' ' : '');
-//             word = '';
-//         }
-//     }
-//     return result;
-// }
+function reverseInPlace(str){
+    let result ='';
+    let word = '';
+    for(let i=0;i<=str.length;i++){
+        if(i<str.length && str[i]!==' '){
+            word = str[i]+word;
+        }
+        else{
+            result+=word+(i<str.length? ' ' : '');
+            word = '';
+        }
+    }
+    return result;
+}
 
-// console.log(reverseInPlace(str));
+console.log(reverseInPlace(str));
 
 
 

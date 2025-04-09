@@ -271,4 +271,8 @@
 // const user1 = buildUser('Sathish',34);
 // console.log(user1);
 
-//[20]
+//[20]Function composition
+// const double = x => x * 2;
+// const square = x => x * x;
+// const compose = x => square(double(x));
+// console.log(compose(2));
