@@ -1,6 +1,5 @@
 // console.log([8]==[8]);
 // console.log([8]===[8]);
-
 // console.log(0.7+0.1==0.8);
 // console.log(0.7+0.1===0.8);
 

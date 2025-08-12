@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="demo" onclick=myfunc()>Original</button>
+
+    <script>
+        console.log('hi');
+        document.write('Hi was consoled');
+        function myfunc(){
+            let confirmation = confirm('Do you want to change the name?');
+            if(confirmation){
+                let name = prompt('What is the name you want to change to?','None')
+                if(name){
+                    document.getElementById('demo').innerHTML=name;
+                    console.warn('Name is about to change');
+                    console.error('Test error');
+                    debugger;
+                    alert('Name has been changed')
+                }
+            }
+        }
+    </script>
+</body>
+</html>

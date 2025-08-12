@@ -1,10 +1,7 @@
-function deepFreeze(object){
-    const propNames = Object.keys(object);
-    for(let names of propNames){
-        let value = object[names];
-        if(value && typeof value === 'object'){
-            deepFreeze(value);
-        }
-    }
-    return Object.freeze(object)
-}
+const str = 'my name is basha';
+
+let arrStr = str.split(' ');
+
+let titleCase = arrStr.map(word=>word.slice(0,-1) + word.slice(-1).toUpperCase()).join(' ')
+
+console.log(titleCase);

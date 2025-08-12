@@ -179,6 +179,7 @@
 //         else if(curr>secondLargest && curr!==largest){
 //             return {largest,secondLargest:curr}
 //         }
+//         return {largest, secondLargest}
 //     },{largest:-Infinity,secondLargest:-Infinity});
 //     return secondLargest;
 // }
