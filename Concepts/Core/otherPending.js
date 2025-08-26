@@ -9,6 +9,7 @@
 // }
 // console.log(convertToTitle(arr));
 
+
 //using reduce to find largest element in a string array
 // const arr = ['hi','hello','wrong'];
 // function longestWord(arr){
@@ -19,8 +20,6 @@
 // console.log(longestWord(arr));
 
 
- 
- 	
 // Find the second largest even number in an array without sorting
 
 // function secondlargestEven(arr){

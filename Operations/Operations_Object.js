@@ -131,7 +131,7 @@
 // person.changelocation('Thanjavur')
 // console.log(person)
 
-//[10]Spread prpoerties
+//[10]Spread properties
 // const person={
 //     name:'sathish',
 //     age:29,

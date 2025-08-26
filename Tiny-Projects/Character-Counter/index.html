@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+</head>
+<body>
+
+    <h1>Character Counter</h1>
+    <input id="Word" type="text" value="" placeholder="Enter a word"> <button id="Submit" onclick="{handleSubmit()}">Submit</button>
+    <p id="Count"></p>
+
+    <script>
+        function handleSubmit(){
+            console.log('Submit clicked')
+            let word = document.getElementById('Word').value;
+            console.log(word);
+            console.log('Word extracted')
+            let count = word.length;
+            console.log('Character counted')
+            document.getElementById('Count').innerHTML = `Character count: ${count}`;
+            console.log(count);
+        }
+    </script>
+</body>
+</html>
