@@ -136,7 +136,7 @@
 //     name:'sathish',
 //     age:29,
 //     company:"Brototype",
-//     location:'Chennai'
+//     location:'Chennai's
 // }
 
 // const person2={
@@ -212,5 +212,23 @@
 // console.log(Object.isFrozen(obj));  // true
 // console.log(Object.isFrozen(obj.b));  // true
 // console.log(Object.isFrozen(obj.b.d));  // true
+
+//[14]object key with highest value
+// const obj = {1:2,2:3,3:4};
+
+// function highestKey(obj){
+//     let largeValue = -Infinity;
+//     let largeKey = null;
+//     for(let key in obj){
+//         if(obj[key]>largeValue){
+//             largeValue = obj[key]
+//             largeKey = key;
+//         }
+//     }
+//     return largeKey;
+// };
+
+// console.log(highestKey(obj));
+
 
 

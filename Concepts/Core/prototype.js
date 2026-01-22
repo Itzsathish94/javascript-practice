@@ -19,7 +19,7 @@ const date = new Date();
 const err = new Error();
 const sym = Symbol('1');
 const bigNum = 1n;
-const regex = /a/;
+const regex = /a/i;
 
 console.log(Object.getPrototypeOf(myArr));
 console.log(Object.getPrototypeOf(str));

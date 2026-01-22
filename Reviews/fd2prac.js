@@ -98,6 +98,15 @@
 //     return result;
 // }
 
+// function uniqueElem(arr){
+//     let result = [];
+//     for(let elem of arr){
+//         if(arr.indexOf(elem)===arr.lastIndexOf(elem)) result.push(elem)
+//     }
+//     return result;
+// }
+
 // console.log(findUnqiue(arr));
+// console.log(uniqueElem(arr));
 
 

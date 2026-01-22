@@ -7,4 +7,5 @@ console.log(myMap);
 let weakmap = new WeakMap();
 let objKey = {name:'object'}
 weakmap.set(objKey,1);
-console.log(weakmap.has(objKey));
+weakmap.set({5:1},1);
+console.log(weakmap);

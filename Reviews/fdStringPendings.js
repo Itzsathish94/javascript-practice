@@ -50,7 +50,7 @@
 // console.log(removeDuplicates(str));
 
 //[4]  write a function to find the extra char that is in t but not in 2
-// let s = "abcd" , t = "bcade";
+// let s = "abcd" , t = "bcadef";
 // function extraCharacter(t,s){
 //     let freq = {};
 

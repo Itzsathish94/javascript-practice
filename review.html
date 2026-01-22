@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="parent">
+    <!-- <div id="parent">
         <button id="child" onclick={handleclick()}>Click me</button>
     </div>
     <script>
@@ -17,6 +17,19 @@
             console.log('Parent clicked')
         })
        })
+    </script> -->
+    <button id="btn" onclick="{nameChange()}">Old name</button>
+    <script>
+        function nameChange(){
+        let name = prompt('Type in new button name',null);
+       if(name){
+        let bool = confirm('Are you sure you want to change button the name to:', name);
+        if(bool){
+            document.getElementById('btn').innerHTML = name;
+            alert('name changed')
+        }
+       }
+        }
     </script>
 </body>
 </html>

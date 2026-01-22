@@ -30,7 +30,6 @@
 //         setTimeout(()=>{
 //             reject('P1 failure')
 //         },3000)
-        
 //     })
 // }
 // function p2(){

@@ -185,3 +185,89 @@
 // }
 
 // console.log(secondLargest([1,2,3,4,5]));
+
+////Optimal wayy
+// function secondLargest(arr){
+
+//     if(arr.length <2 ) return null;
+
+//     let largest = -Infinity;
+//     let secondLargest = -Infinity;
+
+//     for(let i=0;i<=arr.length-1;i++){
+//         if(arr[i]>largest){
+//             secondLargest = largest;
+//             largest = arr[i];
+//         }
+//         else if(arr[i]>secondLargest && arr[i]!==largest){
+//             secondLargest = arr[i];
+//         }
+//     }
+//     return secondLargest === -Infinity ? null : secondLargest;
+// }
+
+// console.log(secondLargest(arr));
+
+//[16] Remove null and undefined from an array
+
+// const arr = [1,2,null,undefined];
+
+// function cleanArr(arr){
+//     let result = [];
+//     for(let elem of arr){
+//         if(elem!==null && elem!==undefined) result.push(elem);
+//     }
+//     return result;
+// }
+
+// console.log(cleanArr(arr));
+
+//[17] Generate prime nums
+// function generatePrime(n){
+//     for(let i=2;i<=n;i++){
+//        let isPrime = true;
+
+//        for(let j=2;j<=Math.sqrt(i);j++){
+//         if(i%j===0){
+//             isPrime = false;
+//             break;
+//         }
+//        }
+//        if(isPrime) console.log(i);
+//     }
+// };
+
+// generatePrime(5);
+
+//[18]Filter only fractions
+// const arr = [1,2,3.4,5.7];
+// function filterFractions(arr){
+//     return arr.filter(num=>!Number.isInteger(num));
+// }
+// console.log(filterFractions(arr));
+
+//[19]Endlessly yield random number from array
+// const arr = [1,2,3,4,5,7,8];
+
+// function* randomNum(arr){
+//     while(true){
+//        let index = Math.floor(Math.random()*arr.length);
+//         yield arr[index];
+//     };
+// }
+
+// let yieldNum = randomNum(arr);
+
+// console.log(yieldNum.next().value);
+// console.log(yieldNum.next().value);
+
+//[20]write a function which will move all the zeros in an array to the right, with minimal time complexity
+// function swapZero(arr){
+//     let nonZeroes = arr.filter(num=>num!==0);
+//     let zeroes = new Array(arr.length - nonZeroes.length).fill(0);
+//     return [...nonZeroes,...zeroes];
+// }
+
+// const arr = [1,2,0,1,0,4,9,1,0,0,5]
+// console.log(swapZero(arr));
+
