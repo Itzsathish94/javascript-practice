@@ -10,6 +10,7 @@ function fetchData2() {
     });
 }
 
+
 async function parallel(){
     try{
         let [a,b] = await Promise.all([fetchData1(),fetchData2()]);
