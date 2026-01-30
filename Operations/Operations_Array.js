@@ -278,4 +278,33 @@
 // }
 
 
+//[22]Print prime numbers from a given array using a generator
+// const arr = [4, 3, 99, 97, 13, 17];
+
+// function isPrime(num){
+//     if(num<2){
+//         return false;
+//     };
+
+//     for(let i=2;i<=Math.sqrt(num);i++){
+//         if(num%i===0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// function* printPrime(arr){
+
+//     for(let i=0;i<arr.length;i++){
+//         if(isPrime(arr[i])) yield arr[i];
+//     }
+// }
+
+// let result = printPrime(arr);
+
+// for (let value of result){
+//     console.log(value);
+// }
+
 

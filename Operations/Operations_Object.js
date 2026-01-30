@@ -230,5 +230,36 @@
 
 // console.log(highestKey(obj));
 
+//[15]Find sum 
+// const abc = [{ab:4},{cd:5},{ef:7}]
+// function sum(obj){
+//     return obj.reduce((acc,curr)=>acc+Object.values(curr)[0],0)
+// };
+
+// console.log(sum(abc))
+
+//[16]Deep copy an array
+// const arr = [1,2,3,[2,3,[1]]];
+
+// function deepCopy(arr){
+//     return Object.assign([],arr);
+// };
+
+// let arr2 = deepCopy(arr);
+// arr2[0] = 100;
+// console.log(arr2);
+// console.log(arr);
+
+//[17]Remove nth element;
+// const array = [1,2,3,4,5,6,6,7]
+// const n  = 6
+
+// function removeNth(arr){
+   
+// };
+
+// removeNth(array);
+// console.log(array);
+
 
 
